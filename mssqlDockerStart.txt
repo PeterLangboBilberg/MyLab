@@ -1,0 +1,11 @@
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=1Password" -e "MSSQL_PID=Express" -p 1433:1433 -p 1434:1434/udp -d mcr.microsoft.com/mssql/server:2019-latest 
+-v /home/peter-bilberg/MountedDrives/mssql:/var/opt/mssql
+
+
+
+
+Postgres SQL
+sudo apt install pgcli
+pgcli -h localhost -p 5432 -u root -d postgres
+
+sudo docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD="root" -e POSTGRES_USER="root" -d postgres
